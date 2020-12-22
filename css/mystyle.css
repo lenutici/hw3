@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "big-john";
+    src: url("fonts/big-john.otf");
+}
+@font-face {
+    font-family: "slim-joe";
+    src: url("fonts/slim-joe.otf");
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+a {
+    font-weight: 700;
+    font-family: "Lato";
+    text-decoration: none;
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+header {
+    background:
+        linear-gradient(
+            rgba(60, 73, 85, 0.8),
+            rgba(60, 73, 85, 0.8) 
+        ),
+        url(../images/header_bkg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 490px;
+    z-index: 1;
+}
+
+.container {
+    height: inherit;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.top_nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav {
+    list-style-position: inside;
+    /* margin: 0; */
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.top_nav .nav li {
+    padding: 0 40px;
+    position: relative;
+}
+
+.top_nav .nav li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    transform: skewX(-15deg);
+    height: 100%;
+    border-color: transparent  #4a555f transparent transparent;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 40px;
+}
+
+.top_nav .nav a {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header-text {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 60%;
+    text-transform: uppercase;
+}
+
+.header-text1, .header-text2 {
+    color: #ffffff;
+}
+
+.header-text1 {
+    font-family: "big-john", sans-serif;
+    font-size: 36px;
+    margin-bottom: unset;
+}
+
+.header-text2 {
+    font-family: "slim-joe", sans-serif;
+    font-size: 23px;
+    font-weight: lighter;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.header-button {
+    text-transform: uppercase;
+    border: 1px solid #48bf72;
+    font-size: 13px;
+    color: #48bf72;
+    font-weight: 700;
+    font-family: "Lato";
+    background: transparent;
+    padding: 9px 17px;
+}
+
+/* Portfolio content */
+
+.filters .nav a {
+    border-radius: 2px;
+    background-color: #eaeaea;
+    padding: 7px 13px;
+    font-size: 13px;
+    color: #3c4955;
+    margin: 5px;
+}
+#active_tab {
+    background-color: #48bf72;
+    color: #ffffff;
+}
+
+.filters .nav {
+    display: flex;
+    justify-content: center;
+    margin: 44px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.small {
+    flex: 40%;
+    padding-right: 20px;
+}
+
+.big {
+    flex: 60%;
+    padding-left: 20px;
+}
+
+.big > *:not(:last-child),
+.small > *:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.column img {
+    vertical-align: top;
+    object-fit: none;
+    object-position: center;
+    height: fit-content;
+    width: 100%;
+    border-radius: 10px;
+}
+.flexbox-item {
+    position: relative;
+}
+.description {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #48bf72;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9; 
+}
+
+h1 {
+    margin-bottom: unset;
+}
+
+.flexbox-item:hover  .description{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+ .portfolio {
+     margin-bottom: 65px;
+ }
+
+/* About us content */
+
+.about-us {
+    background:
+        linear-gradient(
+            rgba(60, 73, 85, 0.8),
+            rgba(60, 73, 85, 0.8) 
+        ),
+        url(../images/about_us_bkg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 390px;
+    z-index: 1;
+}
+
+.about-us .container {
+    position: relative;
+}
+
+.text {
+    width: 40%;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+}
+.contact-button {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 2px solid #3c4955;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 25px;
+    color: #3c4955;
+    padding: 3px 18px;
+}
